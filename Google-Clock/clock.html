@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Google Clock Clone</title>
+  <meta name="author" content="Parth">
+  <meta name="keywords" content="Spck Editor">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="p3.css">
+</head>
+
+<body>
+  <nav id="lgNav" class="p3-bg-black p3-txt-white p3-display-inlineblock w3-display-container">
+    <div id=" navSections" class="w3-display-middle p3-align-center">
+      <div class="p3-ctn p3-border p3-border-round-xxlarge">
+        <svg width="46" height="46" fill="#ddd" stroke-width=".5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="alarmIcon">
+          <path d="M5.459 2 1 6.015 2.338 7.5l4.46-4.015L5.457 2Z"></path>
+          <path d="M11 8h2v4h3v2h-5V8Z"></path>
+          <path fill-rule="evenodd" d="M3 12a9 9 0 1 1 18 0 9 9 0 0 1-18 0Zm2 0a7 7 0 1 1 14 0 7 7 0 0 1-14 0Z" clip-rule="evenodd"></path>
+          <path d="m18.541 2 4.46 4.015L21.66 7.5l-4.458-4.015L18.541 2Z"></path>
+        </svg>
+      </div>
+      <div class="p3-panel p3-ctn p3-border p3-border-round-xxlarge active">
+        <svg width="46" height="46" fill="none" stroke="#afeeee" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="clockIcon">
+          <path d="M12 8v4l3 3"></path>
+          <path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path>
+       </svg>
+      </div>
+      <div class="p3-ctn p3-border p3-border-round-xxlarge">
+        <svg width="46" height="46" fill="#ddd" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="timerIcon">
+          <path d="m18 22-.01-6L14 12l3.99-4.01L18 2H6v6l4 4-4 3.99V22h12ZM8 7.5V4h8v3.5l-4 4-4-4Z"></path>
+        </svg>
+      </div>
+      <div class="p3-panel p3-ctn p3-border p3-border-round-xxlarge">
+        <svg width="46" height="46" fill="#ddd" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="stopwatchIcon">
+          <path fill-rule="evenodd" d="M9 1h6v2H9V1Zm2 13V8h2v6h-2Zm8.03-6.61 1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42A8.962 8.962 0 0 0 12 4a9 9 0 0 0-9 9c0 4.97 4.02 9 9 9a8.994 8.994 0 0 0 7.03-14.61ZM5 13c0 3.87 3.13 7 7 7s7-3.13 7-7-3.13-7-7-7-7 3.13-7 7Z" clip-rule="evenodd"></path>
+       </svg>
+      </div>
+      <div class="p3-ctn p3-border p3-border-round-xxlarge">
+        <svg width="46" height="46" fill="#ddd" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="bedtimeIcon">
+          <path d="M9.94 4.485c-1.63 7.54 3.75 12.41 7.66 13.8a7.993 7.993 0 0 1-4.93 1.71c-4.41 0-8-3.59-8-8 0-3.45 2.2-6.4 5.27-7.51Zm2.72-2.48c-5.59 0-9.99 4.53-9.99 9.99 0 5.52 4.48 10 10 10 3.71 0 6.93-2.02 8.66-5.02-7.51-.25-12.09-8.43-8.32-14.97h-.35Z"></path>
+        </svg>
+      </div>
+    </div>
+  </nav>
+  <header class="p3-header p3-txt-white p3-ctn p3-padding-16">
+    <h3 class="p3-display-inlineblock p3-leftmargin" id="sectionName">Clock</h3>
+    <div class="dropdown p3-display-inlineblock p3-float-right">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="dropdown-toggle" id="kebabMenuIcon" data-bs-toggle="dropdown">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+      </svg>
+      <ul class="dropdown-menu p3-border-round-xlarge">
+        <li class="dropdown-item">Screensaver</li>
+        <li class="dropdown-item">Settings</li>
+        <li class="dropdown-item">Send feedback</li>
+        <li class="dropdown-item">Help</li>
+      </ul>
+    </div>
+  </header>
+  <main class="p3-txt-white p3-display-inlineblock p3-ctn p3-padding-16">
+    <section id="alarmSection">
+      <div id="wakeUpAlarm">
+        <div class="p3-ctn p3-padding-16 p3-border-round-xxlarge">
+          <svg width="46" height="46" fill="#a8c8fb" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="p3-display-inlineblock">
+            <path fill-rule="evenodd" d="M11 .55h2V3.5h-2V.55ZM6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41ZM4 10.5H1v2h3v-2Zm16.45-6.04-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79Zm-1.42 15.5-1.79-1.8 1.4-1.4 1.8 1.79-1.41 1.41ZM23 10.5h-3v2h3v-2Zm-17 1c0-3.31 2.69-6 6-6s6 2.69 6 6-2.69 6-6 6-6-2.69-6-6Zm7 10.95V19.5h-2v2.95h2Zm-8.04-2.5-1.41-1.41 1.79-1.8 1.41 1.41-1.79 1.8Z" clip-rule="evenodd"></path>
+          </svg>
+          <p class="p3-display-inlineblock">Wake up</p>
+          <button class="p3-display-inlineblock p3-border-round-half p3-border-none p3-float-right p3-txt-white w3-hide-large">
+            <svg width="46" height="46" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="m19 9-7 7-7-7"></path>
+            </svg>
+          </button>
+          <hr style="color: #1f1f1f;"/>
+          <p class="p3-font-default">Mon, Tue, Wed, Thu, Fri, Sat</p>
+          <h1 class="p3-display-inlineblock">6 : 30</h1><span class="p3-display-inlineblock p3-weight-bold">am</span>
+          <br />
+          <p class="p3-display-inlineblock p3-font-default" style="color: #a8c8fb;">Change schedule</p>
+          <div class="radio p3-display-inlineblock p3-margin-none p3-padding-none p3-border-round-xlarge p3-float-right">
+            <div class="p3-border-round-half p3-float-right"></div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div id="otherAlarms">
+        <div class="p3-ctn p3-panel p3-padding-16 p3-border-round-xxlarge">
+          <p class="p3-display-inlineblock"></p>
+          <button class="p3-display-inlineblock p3-border-round-half p3-border-none p3-float-right p3-txt-white">
+            <svg width="46" height="46" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="m19 9-7 7-7-7"></path>
+            </svg>
+          </button>
+          <br />
+          <h1 class="p3-display-inlineblock">8 : 30</h1><span class="p3-display-inlineblock p3-weight-bold">am</span>
+          <p class="p3-font-default">Mon, Tue, Wed, Thu, Fri</p>
+          <p class="p3-display-inlineblock"></p>
+          <div class="radio p3-display-inlineblock p3-margin-none p3-padding-none p3-border-round-xlarge p3-float-right">
+            <div class="p3-border-round-half p3-float-right"></div>
+          </div>
+        </div>
+        <div class="p3-ctn p3-padding-16 p3-bottommargin p3-border-round-xxlarge">
+          <p class="p3-display-inlineblock"></p>
+          <button class="p3-display-inlineblock p3-border-round-half p3-border-none p3-float-right p3-txt-white">
+            <svg width="46" height="46" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="m19 9-7 7-7-7"></path>
+            </svg>
+          </button>
+          <br />
+          <h1 class="p3-display-inlineblock">9 : 00</h1><span class="p3-display-inlineblock p3-weight-bold">am</span>
+          <p class="p3-font-default">Sat, Sun</p>
+          <p class="p3-display-inlineblock"></p>
+          <div class="radio p3-display-inlineblock p3-margin-none p3-padding-none p3-border-round-xlarge p3-float-right">
+            <div class="p3-border-round-half p3-float-right"></div>
+          </div>
+        </div>
+        <p><!--Nothing!! But don't remove this line of code, it's working as a bottom margin for the above div!--></p>
+      </div>
+    </section>
+    <section id="clockSection">
+      <div id="time">
+        <h1>
+          <span id="digitalTime"><span id="hours"></span> : <span id="minutes"></span></span>
+          <sub id="meridiem"></sub>
+        </h1>
+        <p><span id="day"></span>, <span id="date"></span> <span id="month"></span></p>
+      </div>
+    </section>
+    <section id="timerSection">
+      <div class="row">
+        <div class="col-lg-6 w3-display-container" style="height: 70vh;">
+          <div class="w3-display-middle">
+            <h1>00</h1>h <h1>00</h1>m <h1>00</h1>s
+          </div>
+        </div>
+        <div class="col-lg-6 w3-display-container" style="height: 70vh;">
+          <div class="w3-display-middle numberTiles">
+            <div class="w3-display-container" id="one" onclick="animateBorder('#one')"><span class="w3-display-middle">1</span></div>
+            <div class="w3-display-container" id="two" onclick="animateBorder('#two')"><span class="w3-display-middle">2</span></div>
+            <div class="w3-display-container" id="three" onclick="animateBorder('#three')"><span class="w3-display-middle">3</span></div><br />
+            <div class="w3-display-container" id="four" onclick="animateBorder('#four')"><span class="w3-display-middle">4</span></div>
+            <div class="w3-display-container" id="five" onclick="animateBorder('#five')"><span class="w3-display-middle">5</span></div>
+            <div class="w3-display-container" id="six" onclick="animateBorder('#six')"><span class="w3-display-middle">6</span></div><br />
+            <div class="w3-display-container" id="seven" onclick="animateBorder('#seven')"><span class="w3-display-middle">7</span></div>
+            <div class="w3-display-container" id="eight" onclick="animateBorder('#eight')"><span class="w3-display-middle">8</span></div>
+            <div class="w3-display-container" id="nine" onclick="animateBorder('#nine')"><span class="w3-display-middle">9</span></div><br />
+            <div class="w3-display-container" id="zeroZero" onclick="animateBorder('#zeroZero')"><span class="w3-display-middle">00</span></div>
+            <div class="w3-display-container" id="zero" onclick="animateBorder('#zero')"><span class="w3-display-middle">0</span></div>
+            <div class="w3-display-container" id="cut" onclick="animateBorder('#cut')" style="background-color: #004a77;"><span class="w3-display-middle">&times;</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="stopwatchSection">
+      <div class="w3-display-container" style="height: 70vh;">
+        <div class="w3-display-middle p3-border-round-half" id="circle">
+          <div class="w3-display-middle">
+            <h1 style="font-size: 3em; margin-bottom: 0; padding-bottom: 0;">00</h1>
+            <h3 style="font-size: 1.5em; margin-bottom: 0; padding-bottom: 0;" class="p3-float-right">00</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="bedtimeSection">
+      <div class="p3-ctn p3-padding-16 p3-border-round-xxlarge p3-bottommargin">
+        <div class="p3-border-round-half p3-padding-none p3-display-inlineblock">
+          <svg width="46" height="46" fill="none" stroke="#afeeee" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.504 12.75a7.5 7.5 0 1 0-14.999 0 7.5 7.5 0 0 0 14.999 0Z"></path>
+            <path d="M6.663 4.275A2.188 2.188 0 0 0 5.25 3.75l-.131.004C3.922 3.826 3 4.875 3.004 6.14c0 .619.218.908.51 1.276a.213.213 0 0 0 .152.083h.041a.151.151 0 0 0 .12-.061L6.674 4.64a.252.252 0 0 0-.012-.366v0Z"></path>
+            <path d="M17.339 4.275a2.187 2.187 0 0 1 1.412-.525l.13.004c1.198.072 2.12 1.121 2.116 2.387 0 .619-.218.908-.51 1.276a.212.212 0 0 1-.151.083h-.042a.152.152 0 0 1-.119-.062l-2.848-2.797a.251.251 0 0 1 .012-.366v0Z"></path>
+            <path d="M12.004 7.5v5.25h-3.75"></path>
+            <path d="m19.504 20.25-1.875-1.875"></path>
+            <path d="m4.504 20.25 1.875-1.875"></path>
+          </svg>
+        </div>
+        <div class="p3-display-inlineblock">Schedule</div>
+        <div id="timings" class="row">
+          <br />
+          <div id="sleepTime" class="col-6 text-center">
+            <p>Bedtime</p>
+            <h1 class="p3-display-inlneblock p3-weight-bolder">11:00</h1>
+          </div>
+          <div id="wakeUpTime" class="col-6 text-center">
+            <p>Wake Up</p>
+            <h1 class="p3-display-inlineblock p3-weight-bolder">6:30</h1>
+          </div>
+        </div>
+        <div class="p3-align-center p3-txt-grey">7 hr 30 min . Next alarm on Monday</div>
+      </div>
+      <div class="p3-ctn p3-padding-16 p3-border-round-xxlarge">
+        <div class="p3-border-round-half p3-padding-none p3-display-inlineblock">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#afeeee" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 01-.99-3.467l2.31-.66A2.25 2.25 0 009 15.553z" />
+          </svg>
+        </div>
+        <div class="p3-display-inlineblock">Sleep Sounds</div>
+        <br /><br />
+        <div id="sounds">
+          <div class="p3-float-left">Deep space</div>
+          <div class="p3-float-right p3-border-round-half p3-border-none" style="background-color: #a8c8fb; width: 50px; height: 50px;">
+            <svg width="46" height="46" fill="#000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="margin: 12px;">
+              <path d="M8 5v14l11-7L8 5Z"></path>
+            </svg>
+          </div>
+          <br /><br />
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="p3-footer">
+    <div class="row">
+      <div class="col-lg-8 col-5"></div>
+      <div class="col-lg-4 col-7">
+        <button class="p3-border-round-half p3-border-none" id="plusIcon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#000" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+          </svg>
+        </button>
+        <button class="p3-border-round-half p3-border-none" id="playIcon">
+          <svg width="46" height="46" fill="#000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 5v14l11-7L8 5Z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <nav id="smNav" class="p3-padding-4 p3-bg-black p3-txt-white">
+      <div id="navSections">
+        <div class="p3-ctn p3-border p3-border-round-xxlarge p3-display-inlineblock">
+          <svg width="46" height="46" fill="#ddd" stroke-width=".5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="alarmIcon">
+            <path d="M5.459 2 1 6.015 2.338 7.5l4.46-4.015L5.457 2Z"></path>
+            <path d="M11 8h2v4h3v2h-5V8Z"></path>
+            <path fill-rule="evenodd" d="M3 12a9 9 0 1 1 18 0 9 9 0 0 1-18 0Zm2 0a7 7 0 1 1 14 0 7 7 0 0 1-14 0Z" clip-rule="evenodd"></path>
+            <path d="m18.541 2 4.46 4.015L21.66 7.5l-4.458-4.015L18.541 2Z"></path>
+          </svg>
+        </div>
+        <div class="p3-panel p3-ctn p3-border p3-border-round-xxlarge p3-display-inlineblock active">
+          <svg width="46" height="46" fill="none" stroke="#afeeee" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="clockIcon">
+            <path d="M12 8v4l3 3"></path>
+            <path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path>
+          </svg>
+        </div>
+        <div class="p3-ctn p3-border p3-border-round-xxlarge p3-display-inlineblock">
+          <svg width="46" height="46" fill="#ddd" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="timerIcon">
+            <path d="m18 22-.01-6L14 12l3.99-4.01L18 2H6v6l4 4-4 3.99V22h12ZM8 7.5V4h8v3.5l-4 4-4-4Z"></path>
+          </svg>
+        </div>
+        <div class="p3-panel p3-ctn p3-border p3-border-round-xxlarge p3-display-inlineblock">
+          <svg width="46" height="46" fill="#ddd" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="stopwatchIcon">
+            <path fill-rule="evenodd" d="M9 1h6v2H9V1Zm2 13V8h2v6h-2Zm8.03-6.61 1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42A8.962 8.962 0 0 0 12 4a9 9 0 0 0-9 9c0 4.97 4.02 9 9 9a8.994 8.994 0 0 0 7.03-14.61ZM5 13c0 3.87 3.13 7 7 7s7-3.13 7-7-3.13-7-7-7-7 3.13-7 7Z" clip-rule="evenodd"></path>
+          </svg>
+        </div>
+        <div class="p3-ctn p3-border p3-border-round-xxlarge p3-display-inlineblock">
+          <svg width="46" height="46" fill="#ddd" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="bedtimeIcon">
+            <path d="M9.94 4.485c-1.63 7.54 3.75 12.41 7.66 13.8a7.993 7.993 0 0 1-4.93 1.71c-4.41 0-8-3.59-8-8 0-3.45 2.2-6.4 5.27-7.51Zm2.72-2.48c-5.59 0-9.99 4.53-9.99 9.99 0 5.52 4.48 10 10 10 3.71 0 6.93-2.02 8.66-5.02-7.51-.25-12.09-8.43-8.32-14.97h-.35Z"></path>
+          </svg>
+        </div>
+      </div>
+    </nav>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
